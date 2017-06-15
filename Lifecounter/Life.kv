@@ -1,0 +1,72 @@
+#:kivy 1.8.0
+
+<LifeCounter>:
+    
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.size
+        BoxLayout:
+            size_hint: 1,.2
+            Label:
+                id: nameLabel
+                text :'MTG-Counter'
+                font_size: self.height/4
+            Button:
+                id: startBtn
+                text: 'start'
+                font_size: self.height/2
+                on_release: root.startTimer()
+            Label:
+                id: timeLabel
+                font_size: self.height/2
+                text:'50:00'
+            Button:
+                id: stopBtn
+                text:'round'
+                disabled: True
+                font_size: self.height/2
+                on_release: root.stopTimer()
+            Button:
+                id: resetBtn
+                text:'game'
+                font_size: self.height/2
+                on_release: root.resetAction()
+        BoxLayout:
+            size_hint: 1, 1
+            BoxLayout:
+                orientation: 'vertical'
+                Button:
+                    id: p1up
+                    size_hint: 1,.2
+                    text: '+'
+                    on_release: root.increasePoneLife()
+                Label:
+                    id: p1life
+                    text: '20'
+                    font_size: (self.height*3)/4
+                Button
+                    id: p1down
+                    size_hint: 1,.2
+                    text: '-'
+                    on_release: root.decreasePoneLife()
+            BoxLayout:
+                orientation:'vertical'
+                Button:
+                    id: p2up
+                    size_hint: 1,.2
+                    text: '+'
+                    on_release: root.increasePtwoLife()
+                Label:
+                    id: p2life
+                    text: '20'
+                    font_size: (self.height*3)/4
+                Button
+                    id: p2down
+                    size_hint: 1, .2
+                    text: '-'
+                    on_release: root.decreasePtwoLife()
+     
+                  
+        
+    
+   
