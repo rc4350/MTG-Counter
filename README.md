@@ -14,4 +14,4 @@ upon reaching zero the timer will display "TIME" in red and stop counting down.
 A typical round of magic the gathering is 50 minutes.  
 -Clicking the "game" button will reset the life totals of both players to 20.  
 This will not affect time and can be done regardless of if timer is running or not.  
--The 
+-The buttons above and below the life counts will increase or descrease the count by 1.
